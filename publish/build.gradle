@@ -5,12 +5,13 @@ publishing {
   publications {
     ltr(MavenPublication) {
       from components.java
+      afterEvaluate {
+        artifactId = 'elasticsearch-learning-to-rank'
+      }
 
       pom {
         name = 'Elasticsearch Learning to Rank plugin'
-        artifactId = 'elasticsearch-learning-to-rank'
         description = 'Learning to Rank Query w/ RankLib Models'
-        url = 'https://elasticsearch-learning-to-rank.readthedocs.io/'
 
         licenses {
           license {
@@ -25,12 +26,6 @@ publishing {
             name = 'Oscar'
             email = 'oscar@o19s.com'
           }
-        }
-
-        scm {
-          url = 'https://github.com/o19s/elasticsearch-learning-to-rank'
-          connection = 'scm:git:git://github.com/o19s/elasticsearch-learning-to-rank.git'
-          developerConnection = 'scm:git:https://github.com/o19s/elasticsearch-learning-to-rank.git'
         }
       }
     }
