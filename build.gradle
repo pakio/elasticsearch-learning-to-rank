@@ -96,3 +96,5 @@ validateNebulaPom.enabled = false
 // Elastic tried to remove the logging requirement for plugins, but didn't get it quite right so this is a short term fix until 7.11
 // https://github.com/elastic/elasticsearch/issues/65247
 loggerUsageCheck.enabled = false
+
+apply from : 'publish/build.gradle'
